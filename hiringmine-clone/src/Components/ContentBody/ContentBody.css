@@ -162,6 +162,7 @@ img {
     margin: 20px auto;
     gap: 10px;
 }
+
 .quickStepCards div {
     /* border: 1px solid red; */
     display: flex;
@@ -501,4 +502,40 @@ img {
     background-color: transparent;
     display: flex;
     gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .quickStepCards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .quickJobCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .jobList{
+        grid-template-columns: repeat(1, 1fr);
+        /* margin: 20px 100px; */
+    }
+    .MainSideBanner{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) { /* Fixed the typo here */
+    .quickStepCards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .quickJobCards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .jobList{
+        grid-template-columns: repeat(1, 1fr);
+        /* margin: 20px 100px; */
+    }
+    .MainSideBanner{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
 }

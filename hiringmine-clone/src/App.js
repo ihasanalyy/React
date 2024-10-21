@@ -2,7 +2,7 @@ import Navbar from './Components/navbar/Navbar';
 import ContentBody from './Components/ContentBody/ContentBody';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import GetJobs from './Components/jobPage';
+import {GetJobs, JobBox} from './Components/jobPage';
 function App() {
 
   return (
@@ -21,6 +21,7 @@ function App() {
       </div>
     </>} />
        <Route path="/jobs" element={<GetJobs />} />
+       
      </Routes>
    </Router>
   );

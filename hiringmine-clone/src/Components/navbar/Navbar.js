@@ -1,7 +1,7 @@
 import logo from '../../Assests/logo.png'
 import './navbar.css'
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 const Navbar = () => {
     const navigate = useNavigate();
     const homepage = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
                 <ul>
                     <li>About Us</li>
                     <li>People</li>
-                    <li><a href='/jobs'>Jobs</a></li>
+                    <li><Link to='/jobs'>Jobs</Link></li>
                     <li>Login</li>
                     <li>Join Now</li>
                     <li>Employee / Post Job</li>

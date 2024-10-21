@@ -32,3 +32,6 @@
 .mainNav button:hover {
     color: #555;
 }
+.mainNav ul li a {
+    text-decoration: none;
+}

@@ -170,7 +170,7 @@ const ContentBody = () => {
         </>
     )
 }
-export default ContentBody
+export  default ContentBody
 
 const QuickStepCards = ({ arr }) => {
     return (
