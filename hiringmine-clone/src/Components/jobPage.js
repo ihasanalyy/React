@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import logo from '../Assests/jobcardlogo.png';
 import Navbar from "./navbar/Navbar"
-
+import MultipleSelectCheckmarks from '../../src/Components/Chips';
 
 const GetJobs = () => {
     useEffect(() => {
@@ -17,11 +17,38 @@ const GetJobs = () => {
             })
     }
     const [joblist, GetjobList] = useState([])
+    const [filter, Setfilter] = useState([])
 
+const GetFilteration = () => {
+    fetch(`https://backend-prod.app.hiringmine.com/api/filterations/all`)
+    .then((res) => (res.json()))
+    .then((res) => {
+        console.log(res.data, "filteration")
+        Setfilter(res.data)
+       
+    }
+)}
+    useEffect(()=>{
+        GetFilteration()
+    },[])
+
+
+    console.log(filter.filteration, "====>>>>>")
     return (
         <>
         <Navbar />
-
+        <div style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            width: "80%",
+            flexWrap: "wrap",
+            margin: "20px auto",
+        }}>
+                {filter.filteration?.map((filter,index)=>
+                    <MultipleSelectCheckmarks filter={filter} key={index} /> )}
+        </div>
+        
         <div style={{
             display: "grid",
             width: "70%",

@@ -12,10 +12,10 @@ function App() {
   // USESTATE FOE MOVIES API
   const [movies, SetMovies] = useState([]);
   const getMovies = async () => {
-    const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=2069fe59`)
+    const response = await fetch(`https://www.omdbapi.com/?s=guardians&apikey=2069fe59`)
     const data = await response.json()
     console.log(data)
-    SetMovies(data)
+    SetMovies(data.Search)
     console.log(movies , "data araha hai")
     // fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=2069fe59`)
     //   .then(response => response.json())
