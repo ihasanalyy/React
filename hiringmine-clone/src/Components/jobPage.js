@@ -1,9 +1,10 @@
 // import { JobList } from "./ContentBody/ContentBody"
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import logo from '../Assests/jobcardlogo.png';
-import Navbar from "./navbar/Navbar"
+import Navbar from "./navbar/Navbar";
 import MultipleSelectCheckmarks from '../../src/Components/Chips';
-
+import { useNavigate } from "react-router-dom";
+import JobDetailsCard from '../Components/JobDetailsCard';
 const GetJobs = () => {
     useEffect(() => {
         getJobList()
@@ -67,9 +68,18 @@ const GetFilteration = () => {
 export {GetJobs}
 
 const JobList = ({ j }) => {
+    // CALLING HOOK
+    const navigate = useNavigate()
+
+    const OpenHandler = () => {
+        console.log("===>>>", j._id);
+        navigate(`/jobs/jobcards/${j._id}`)
+       
+    }
     
     return (
-        <div className='MainBox' >
+        
+        <div className='MainBox' onClick={OpenHandler}>
             <div className='FirstDiv'>
                 <div className='FirstSub'>
                     <p>{j.companyName ? `${j.companyName}` : <p>No mentioned</p> }</p>
@@ -90,25 +100,7 @@ const JobList = ({ j }) => {
                 </div>
             </div>
         </div>
+        
     )
 }
-// const openHandler = () => {
-   
-//     console.log('Open button clicked')
-//    return (
-//     <div>
-        
-//     </div>
-//    )
-// }
-
-// const JobBox = () => {
-//     <Link to='/Jobbox'></Link>
-
-//     console.log("cliecked")
-//     return (
-//         <h1>main hoon JOB BOX</h1>
-//     )
-// }
-
-// export { JobBox}
+export {JobDetailsCard}

@@ -13,13 +13,15 @@ const Navbar = () => {
                <img onClick={homepage} src={logo} alt='HiringMineLogo' />
             
            
-                <ul>
-                    <li>About Us</li>
-                    <li>People</li>
+                <ul style={{
+                    textTransform: 'none'
+                }}>
+                    <li><Link to='/Aboutus'>About Us</Link></li>
+                    <li><Link to='/people'>People</Link></li>
                     <li><Link to='/jobs'>Jobs</Link></li>
-                    <li>Login</li>
-                    <li>Join Now</li>
-                    <li>Employee / Post Job</li>
+                    <li><Link to='/login'>Login</Link></li>
+                    <li><Link to='/joinnow'>Join Now</Link></li>
+                    <li><Link to='/employee'>Employee / Post Job</Link></li>
                 </ul>
             
         
