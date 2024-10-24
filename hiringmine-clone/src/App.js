@@ -9,6 +9,7 @@ import About from './Components/Pages/About';
 import Employee from './Components/Pages/Employee';
 import People from './Components/Pages/People';
 import JoinNow from './Components/Pages/JoinNow';
+
 function App() {
 
   return (

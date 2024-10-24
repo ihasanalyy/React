@@ -1,0 +1,45 @@
+.Main{
+    width: 50%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #6952ff;
+    border-radius: 20px;
+    padding: 20px;
+}
+.First{
+   display: flex;
+   flex-direction: column;
+   height: 300px;
+   border: 1px solid #6952ff;
+   justify-content: space-around;
+   padding: 20px;
+}
+.First img {
+    width: 50px;
+    height: 30px;
+}
+.Second{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    border: 1px solid #6952ff;
+    justify-content: space-around;
+    padding: 20px;
+}
+.Third{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    border: 1px solid #6952ff;
+    justify-content: space-around;
+    padding: 20px;
+}
+.Fourth{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: 1px solid #6952ff;
+    justify-content: space-around;
+    padding: 20px;
+}

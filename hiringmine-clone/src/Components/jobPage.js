@@ -19,6 +19,7 @@ const GetJobs = () => {
     }
     const [joblist, GetjobList] = useState([])
     const [filter, Setfilter] = useState([])
+    
 
 const GetFilteration = () => {
     fetch(`https://backend-prod.app.hiringmine.com/api/filterations/all`)
